@@ -1,8 +1,11 @@
-interface ButtonProps{
-   text?:string
-}
-export function Button(props: ButtonProps) {
-   // biome-ignore lint/a11y/useButtonType: <explanation>
-   return <button className="bg-amber-500 px-5 py-2 rounded-lg">{props.text || 'Enviar'}</button>
+import { ComponentProps, ReactNode } from 'react';
 
+interface ButtonProps extends ComponentProps<'button'> {}
+export function Button(props: ButtonProps) {
+  return (
+    <button
+      className="flex justify-between items-center px-5 h-12 bg-gray-500 text-primary font-semibold rounded-xl w-full cursor-pointer transition-colors duration-300 hover:bg-primary hover:text-gray-900"
+      {...props}
+    />
+  );
 }
