@@ -13,7 +13,7 @@ const oxanium = Oxanium({
 });
 
 const montserrat = Montserrat({
-  weight: ['500', '600'],
+  weight: ['400', '600'],
   subsets: ['latin'],
   variable: '--font-montserrat',
 });
@@ -25,8 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={`${oxanium.variable} ${montserrat.variable}`}>
-      <body className="bg-black text-white text-4xl font-bold">{children}</body>
+      <body className="bg-gray-900 text-gray-100 antialiased ">{children}</body>
     </html>
   );
 }
-/* Teste */
