@@ -22,3 +22,6 @@
 
   --radius-xl: 0.625rem;
 }
+body {
+  cursor: none;
+}
