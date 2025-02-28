@@ -1,6 +1,6 @@
 import { Button } from '@/components/button'
 import { InputField, InputIcon, InputRoot } from '@/components/input'
-import { Mail, RadioTower, TicketCheck, UserRound } from 'lucide-react'
+import { AtSign, Mail, RadioTower, TicketCheck, UserRound } from 'lucide-react'
 import Image from 'next/image'
 import logo from '../assets/rankdev.svg'
 
@@ -45,16 +45,23 @@ export default function Home() {
             <div className="space-y-3">
               <InputRoot>
                 <InputIcon>
-                  <UserRound />
+                  <UserRound className="size-5 text-[#b6ffa0]" />
                 </InputIcon>
                 <InputField type="text" placeholder="Full name" />
               </InputRoot>
 
               <InputRoot>
                 <InputIcon>
-                  <Mail />
+                  <Mail className="size-5 text-[#31a2ff]" />
                 </InputIcon>
                 <InputField type="email" placeholder="E-mail" />
+              </InputRoot>
+
+              <InputRoot>
+                <InputIcon>
+                  <AtSign className="size-5 text-secondary" />
+                </InputIcon>
+                <InputField type="url" placeholder="Social Media" />
               </InputRoot>
             </div>
 
