@@ -41,7 +41,7 @@ export default function Home() {
             Registration
           </h2>
           <div className="space-y-3">
-            <InputRoot className="no-text-cursor">
+            <InputRoot >
               <InputIcon>
                 <UserRound className="size-5 text-[#b6ffa0]" />
               </InputIcon>
@@ -52,7 +52,7 @@ export default function Home() {
               />
             </InputRoot>
 
-            <InputRoot className="no-text-cursor">
+            <InputRoot >
               <InputIcon>
                 <Mail className="size-5 text-[#31a2ff]" />
               </InputIcon>
@@ -63,7 +63,7 @@ export default function Home() {
               />
             </InputRoot>
 
-            <InputRoot className="focus-within:border-secondary no-text-cursor">
+            <InputRoot className="focus-within:border-secondary">
               <InputIcon>
                 <AtSign className="size-5 text-secondary" />
               </InputIcon>
