@@ -48,7 +48,7 @@ export default function RootLayout({
 
         {isClient && (
           <MousePointer2
-            className="fixed text-yellow-400 pointer-events-none hidden md:block"
+            className="fixed text-[#b3eba8] pointer-events-none hidden md:block"
             style={{
               left: cursorPos.x,
               top: cursorPos.y,
