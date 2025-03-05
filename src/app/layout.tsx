@@ -3,7 +3,7 @@
 import './globals.css'
 import { MousePointer2 } from 'lucide-react'
 import { Montserrat, Oxanium } from 'next/font/google'
-import { useEffect, useState } from 'react'
+import { useCursor } from '../app/hooks/useCursor'
 
 const oxanium = Oxanium({
   weight: ['500', '600'],
@@ -22,17 +22,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 })
-  const [isClient, setIsClient] = useState(false)
-
-  useEffect(() => {
-    setIsClient(true)
-    const handleMouseMove = (e: MouseEvent) => {
-      setCursorPos({ x: e.clientX, y: e.clientY })
-    }
-    window.addEventListener('mousemove', handleMouseMove)
-    return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
+  const { cursorPos, isClient } = useCursor()
 
   return (
     <html lang="pt-BR" className={`${oxanium.variable} ${montserrat.variable}`}>
