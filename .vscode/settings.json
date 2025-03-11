@@ -14,5 +14,7 @@
 	},
 	"editor.detectIndentation": false,
 	"editor.tabSize": 3,
-	"editor.insertSpaces": false
+	"editor.insertSpaces": false,
+	"editor.smoothScrolling": true,
+	"editor.fastScrollSensitivity": 5 //precisa preciosar ALT e rolar o mouse para funcionar
 }
