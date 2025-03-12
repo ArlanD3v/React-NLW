@@ -1,12 +1,20 @@
 import Image from 'next/image';
-import logo from '../../assets/rankdev.svg';
+import logo from '../../../assets/rankdev.svg';
 import { Ranking } from './ranking';
 import { Stats } from './stats';
 import { InviteLinkInput } from './invite-link-input';
 
-export default function InvitePage() {
+interface InvitePagesProps{
+	params : Promise<{
+		subscriberId:string
+	}>
+}
 
-	const inviteLink = 'rankdev.com/invite/us/0001'
+export default async function InvitePage(props:InvitePagesProps) {
+
+	const{ subscriberId}  = await props.params
+
+	const inviteLink = `http://localhost:3333/invites/${subscriberId}`
 	
   return (
 	 <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">

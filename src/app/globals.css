@@ -25,3 +25,11 @@
 body {
   cursor: none;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #13161b inset !important; /* Cor de fundo*/
+  -webkit-text-fill-color: #e2e8f0 !important; /* Cor do texto */
+}
