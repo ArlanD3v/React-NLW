@@ -14,7 +14,7 @@ export default async function InvitePage(props:InvitePagesProps) {
 
 	const{ subscriberId}  = await props.params
 
-	const inviteLink = `http://localhost:3333/invites/${subscriberId}`
+	const inviteLink = `http://localhost:3333/invites/rankdev/${subscriberId}` // Inclusão do /rankdev para personalização
 	
   return (
 	 <div className="min-h-dvh flex items-center justify-between gap-16 flex-col md:flex-row">
@@ -30,8 +30,8 @@ export default async function InvitePage(props:InvitePagesProps) {
 			 </p>
 		  </div>
 
-		  <div className="space-y-6">
-			 <div className="space-y-3">
+		  <div className="space-y-12">
+			 <div className="space-y-">
 				<h2 className="text-gray-200 text-xl font-heading font-semibold leading-none">
 				  Indicate and Win
 				</h2>
@@ -41,7 +41,7 @@ export default async function InvitePage(props:InvitePagesProps) {
 				</p>
 			 </div>
 				<InviteLinkInput inviteLink={inviteLink} />
-				<Stats />
+				<Stats subscriberId={subscriberId} />
 		  </div>
 		</div>
 

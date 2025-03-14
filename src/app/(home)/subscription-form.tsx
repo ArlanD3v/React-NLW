@@ -34,7 +34,7 @@ const searchParams = useSearchParams()
 
 	 const{subscriberId} = await subscribeToEvent ({name, email, socmedia, referrer})
 
-	 router.push(`/invite/${subscriberId}`)
+	 router.push(`/invite/${subscriberId}`)  // Não alterar o router.push
   }
 
   return (
@@ -111,5 +111,3 @@ const searchParams = useSearchParams()
 	 </form>
   )
 }
-
-//33
